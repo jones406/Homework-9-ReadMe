@@ -41,19 +41,26 @@ function renderLicenseSection(license) {
   }
 }
 
-
 // Function: generate markdown for README
 function generateMarkdown(response) {
   return `# ${response.title}
-  ## ${response.description}
-  ## ${response.install}
-  ## ${response.usage}
-  ## ${response.credits}
-  ## ${response.license}`
+  ##Description  
+  ${response.description}
+  ##Installation  
+  ${response.install}
+  ##Usage  
+  ${response.usage}
+  ##Credits  
+  ${response.credits}
+  ##License 
+   ${response.license}`
   renderLicenseSection(license);
-  `## ${response.contribute}
-  ## ${response.test}
-  ## ${response.questions}
+  `##Contribute  
+  ${response.contribute}
+  ##Test 
+   ${response.test}
+  ##Questions  
+  ${response.questions}
 `;
 }
 
