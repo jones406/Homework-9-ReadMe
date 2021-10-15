@@ -11,7 +11,7 @@ const questions = [
     { name: "install", message: "How do you install your project?", type: "input" },
     { name: "usage", message: "List usage steps.", type: "input" },
     { name: "credits", message: "List contributors and references:", type: "input" },
-    { name: "license", message: "License:", type: "checkbox", choices: ["MIT", "GPLv2", "Apache", "Other"] },
+    { name: "license", message: "License:", type: "checkbox", choices: ["MIT", "GPLv2", "Apache", "Other"]},
     { name: "contribute", message: "How to contribute:", type: "input", },
     { name: "test", message: "How to run tests:", type: "input" },
     { name: "questions", message: "Where should questions be directed?", type: "input" }]
