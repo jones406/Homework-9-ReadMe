@@ -1,48 +1,59 @@
-// Function that returns a license badge based on which license is passed in. If there is no license, return an empty string
+// Function: return license badge. If no license, return an empty string.
 function renderLicenseBadge(license) {
-  if (data.license == "MIT") {
-    return 
+  if (license === "MIT") {
+    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
   }
-  if (data.license == "GPLv2") {
-    return 
+  if (license === "GPLv2") {
+    return '[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)'
   }
-  if (data.license == "Apache") {
-    return 
+  if (license === "Apache") {
+    return '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
   }
   else {
     return ``
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function: return license link. If no license, return empty string.
 function renderLicenseLink(license) {
-  if (data.license) {
-    return 
+  if (license === "MIT") {
+    return 'https://www.mit.edu/~amini/LICENSE.md'
+  }
+  if (license === "GPLv2") {
+    return 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html'
+  }
+  if (license === "Apache") {
+    return 'https://www.apache.org/licenses/LICENSE-2.0'
   }
   else {
     return ``
   }
 }
 
-// TODO: Create a function that returns the license section of README. If there is no license, return an empty string
+// Function: return license section of README. If no license, return empty string.
 function renderLicenseSection(license) {
-  if (data.license = false) {
-    data.license = "";
+  if (license) {
+    return '## ${response.license}';
+    renderLicenseBadge(license);
+    renderLicenseLink(license);
+  } else {
+    return ''
   }
 }
 
-// Function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-  ## ${data.description}
-  ## ${data.install
-  ## ${data.usage}
-  ## ${data.credits}
-  ## ${data.license}
-  ## ${data.contribute}
-  ## ${data.test}
-  ## ${data.questions}
+
+// Function: generate markdown for README
+function generateMarkdown(response) {
+  return `# ${response.title}
+  ## ${response.description}
+  ## ${response.install}
+  ## ${response.usage}
+  ## ${response.credits}
+  ## ${response.license}`
+  renderLicenseSection(license);
+  `## ${response.contribute}
+  ## ${response.test}
+  ## ${response.questions}
 `;
 }
 
