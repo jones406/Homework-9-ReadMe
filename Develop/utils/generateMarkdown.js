@@ -27,35 +27,44 @@ function renderLicenseLink(license) {
 // Function: return license section of README. If no license, return empty string.
 function renderLicenseSection(license) {
   if (license) {
-    return `## ${response.license}
+    return `## License ${license}
     ${renderLicenseBadge(license)}
-    ${renderLicenseLink(license)};
+    ${renderLicenseLink(license)}
     `
   } else {
     return ``
   }
-}
+};
 
 // Function: generate markdown for README
 function generateMarkdown(response) {
   return `# ${response.title}
-  ##Description  
+  ## Description  
   ${response.description}
-  ##Installation  
+  ## Table of Contents
+- [Installation](#install)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Contributing](#contribute)
+- [Tests](#test)
+- [Questions](#questions)
+  ## Installation  
   ${response.install}
-  ##Usage  
+  ## Usage  
   ${response.usage}
-  ##Credits  
+  ## Credits  
   ${response.credits}
-  ##License
-  ${renderLicenseSection(response.license)};
-  ##Contribute  
+  ## License
+  ${renderLicenseSection};
+  ## Contribute  
   ${response.contribute}
-  ##Test 
+  ## Test 
    ${response.test}
-  ##Questions  
+  ## Questions  
+  For questions, please check out my Github profile or email me.
   ${response.questions}
 `;
-}
+};
 
 module.exports = generateMarkdown;
