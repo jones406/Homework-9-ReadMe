@@ -57,7 +57,7 @@ function generateMarkdown(response) {
   ## Credits  
   ${response.credits}
   ## License
-  ${renderLicenseSection};
+  ${renderLicenseSection(response.license)};
   ## Contribute  
   ${response.contribute}
   ## Test 
