@@ -1,24 +1,31 @@
 // Function: return license badge. If no license, return empty string.
 function renderLicenseBadge(license) {
   if (license === "MIT") {
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+    `
   } if (license === "GPLv2") {
-    return `[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
+    return `[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)  
+    `
   } if (license === "Apache") {
-    return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+    return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)  
+    `
   } else {
-    return ``
+    return `  
+    `
   }
 }
 
 // Function: return license link. If no license, return empty string.
 function renderLicenseLink(license) {
   if (license === "MIT") {
-    return `https://www.mit.edu/~amini/LICENSE.md`
+    return `  https://www.mit.edu/~amini/LICENSE.md  
+    `
   } if (license === "GPLv2") {
-    return `https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html`
+    return `  https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html  
+    `
   } if (license === "Apache") {
-    return `https://www.apache.org/licenses/LICENSE-2.0`
+    return `  https://www.apache.org/licenses/LICENSE-2.0  
+    `
   } else {
     return ``
   }
@@ -27,15 +34,32 @@ function renderLicenseLink(license) {
 // Function: return license section of README. If no license, return empty string.
 function renderLicenseSection(license) {
   if (license) {
-    return `  
-    ## License ${license}
+    return `## License ${license}
     ${renderLicenseBadge(license)}
-    ${renderLicenseLink(license)}
+    Link: ${renderLicenseLink(license)}
     `
   } else {
     return ``
   }
-};
+}
+
+//return github link
+function renderGithubLink(response) {
+  if (response.github) {
+    return `  [My Github](https://www.github.com/${response.github})`
+  } else {
+    return 'No github username provided.'
+  }
+}
+
+//return email link
+function renderEmailLink(response) {
+  if (response.email) {
+    return ` [Email Me](mailto:${response.email})`
+  } else {
+    return 'No email provided.'
+  }
+}
 
 // Function: generate markdown for README
 function generateMarkdown(response) {
@@ -49,22 +73,23 @@ function generateMarkdown(response) {
 - [License](#license)
 - [Contributing](#contribute)
 - [Tests](#test)
-- [Questions](#questions)
+- [Questions](#questions)  
+
   ## Installation  
-  ${response.install}
+  ${response.install}  
   ## Usage  
-  ${response.usage}
+  ${response.usage}  
   ## Credits  
-  ${response.credits}
-  ## License
-  ${renderLicenseSection(response.license)};
+  ${response.credits}  
+  ${renderLicenseSection(response.license)}  
   ## Contribute  
-  ${response.contribute}
-  ## Test 
-   ${response.test}
+  ${response.contribute}  
+  ## Test  
+  ${response.test}
   ## Questions  
-  For questions, please check out my Github profile or email me.
-  ${response.questions}
+  For questions, please check out my Github profile or email me.  
+  ${renderGithubLink(response)}  
+  ${renderEmailLink(response)}  
 `;
 };
 

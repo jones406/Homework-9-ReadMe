@@ -1,6 +1,6 @@
-# d
+# Homework 9: README Generator in Node.js
   ## Description  
-  d
+  This command-line application was made to gather user input and generate a quality README.md file. 
   ## Table of Contents
 - [Installation](#install)
 - [Usage](#usage)
@@ -8,23 +8,27 @@
 - [License](#license)
 - [Contributing](#contribute)
 - [Tests](#test)
-- [Questions](#questions)
+- [Questions](#questions)  
+
   ## Installation  
-  d
+  To use this node.js application, first run the command "npm i" from the package.json file. Then from the index.js file run the command "node index.js" and answer the prompts. Once you complete this, a README.md file will be generated from your responses.  
+  
   ## Usage  
-  dddd
+  See above.  
   ## Credits  
-  d
-  ## License
+  Brooke Jones  
     
     ## License MIT
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-    https://www.mit.edu/~amini/LICENSE.md
-    ;
+    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+    
+      https://www.mit.edu/~amini/LICENSE.md  
+    
+      
   ## Contribute  
-  d
-  ## Test 
-   d
+  Suggestions can be provided at the email link below.  
+  ## Test  
+  N/A
   ## Questions  
-  For questions, please check out my Github profile or email me.
-  alsdkja;sdljfhas
+  For questions, please check out my Github profile or email me.  
+    [My Github](https://www.github.com/jones406)  
+   [Email Me](mailto:brookejones406@gmail.com)  
