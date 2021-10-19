@@ -1,6 +1,6 @@
-# l
+# Hello
   ## Description  
-  l
+  hi
   ## Table of Contents
 - [Installation](#install)
 - [Usage](#usage)
@@ -8,18 +8,18 @@
 - [License](#license)
 - [Contributing](#contribute)
 - [Tests](#test)
-- [Questions](#questions)
+- [Questions](#questions)  
+
   ## Installation  
-  l
+  stuff
   ## Usage  
-  l
+  thing
   ## Credits  
-  l
+  me
   ## License
   function renderLicenseSection(license) {
   if (license) {
-    return `  
-    ## License ${license}
+    return `## License ${license}
     ${renderLicenseBadge(license)}
     ${renderLicenseLink(license)}
     `
@@ -28,8 +28,9 @@
   }
 };
   ## Contribute  
-  l
+  nothing
   ## Test 
-   l
+   no
   ## Questions  
-  l
+  For questions, please check out my Github profile or email me.
+  jones406

@@ -41,9 +41,6 @@ init();
 
 
 
-
-
-
 // ? Project title: Homework 9: README Generator in Node.js
 // ? Short project description: This command-line application was made to gather user input and generate a quality README.md file. 
 // ? How do you install your project? To use this application, you need to install node.js and the inquirer npm. You can install this by entering "npm i" in your terminal after 

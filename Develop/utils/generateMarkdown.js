@@ -1,4 +1,4 @@
-// Function: return license badge. If no license, return an empty string.
+// Function: return license badge. If no license, return empty string.
 function renderLicenseBadge(license) {
   if (license === "MIT") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
@@ -27,7 +27,8 @@ function renderLicenseLink(license) {
 // Function: return license section of README. If no license, return empty string.
 function renderLicenseSection(license) {
   if (license) {
-    return `## License ${license}
+    return `  
+    ## License ${license}
     ${renderLicenseBadge(license)}
     ${renderLicenseLink(license)}
     `
